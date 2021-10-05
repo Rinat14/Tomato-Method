@@ -1,0 +1,228 @@
+*::before, *::after, *{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Big Shoulders Stencil Display', cursive;
+	font-weight: 400;
+	font-size: 18px;
+	min-width: 320px;
+	color: var(--light-color);
+	background: url('../source/img/Body/first-img.jpg') center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.dark{
+	--light-color: #000;
+	--dark-color: #fff;
+	--light-mode-color: #000;
+	--shadow-color: #ff7a51;
+	background: url('../source/img/Body/second-img.jpg') center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.dark-footer{
+	--light-color: #000;
+	--dark-color: #fff;
+	background: url('../source/img/Body/second-img.jpg') center no-repeat;
+	background-size: cover;
+}
+:root{
+	--light-color: #fff;
+	--dark-color: #000;
+	--light-mode-color: #fff;
+	--shadow-color: #54cfff;
+	--facebook-color: #4867AA;
+	--telegram-color: #27A7E8;
+	--instagram-color: #E94A46;
+	--youtube-color: #ff0800;
+	--linkedin-color: #0C7AB5;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+h1{
+	color: var(--light-color);
+	font-size: 65px;
+}
+h2{
+	color: var(--light-color);
+	font-size: 36px;
+	border: 2px solid var(--light-color);
+	border-radius: 30px;
+	width: 500px;
+	padding: 6px 15px;
+	position: relative;
+}
+.btn-plus,
+.btn-plus-2,
+.btn-plus-3,
+.btn-plus-4,
+.btn-plus-5{
+	font-size: 25px;
+	padding: 13px 15px;
+	background-color: var(--light-color);
+	color: var(--dark-color);
+	border-radius: 30px;
+	cursor: pointer;
+	position: absolute;
+	left: 29rem;
+	top: 3.5px;
+	z-index: 1000;
+}
+li{
+	font-size: 28px;
+}
+li span{
+	font-size: 20px;
+}
+.dark-light-mode{
+	width: 60px;
+	height: 30px;
+	border: 2px solid var(--light-mode-color);
+	border-radius: 30px;
+	box-shadow:  0 0 35px 10px var(--shadow-color);
+	position: fixed;
+	right: 2rem;
+	top: 2rem;
+	background-color: var(--shadow-color);
+	z-index: 20000;
+	transition: all 0.4s ease-in-out;
+}
+.dark-light-mode .mode-btn{
+	width: 30px;
+	height: 30px;
+	background-color: var(--light-mode-color);
+	z-index: 20001;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+	margin-top: -2px;
+}
+.hide{
+	opacity: 0;
+	visibility: hidden;
+}
+li span button{
+	width: 45px;
+	height: 45px;
+	border: none;
+	outline: none;
+	background-color: var(--light-color);
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 30px;
+	margin-left: 30px;
+	color: var(--dark-color);
+	transition: all 0.5s ease-in-out;
+}
+li span button:hover{
+	background-color: transparent;
+	border: 1px solid var(--light-color);
+	color: var(--light-color);
+}
+.title-of-inner-html{
+	color: #00A86B;
+	font-size: 36px;
+}
+.title-of-inner-html i{
+	color: #00A86B;
+}
+@media screen and (max-width: 700px){
+	.dark-light-mode{
+		width: 50px;
+		height: 25px;
+	}
+	.dark-light-mode .mode-btn{
+		width: 25px;
+		height: 25px;
+		margin-left: -5px;
+	}
+}
+@media screen and (max-width: 600px){
+	h1{
+		font-size: 40px;
+	}
+	h2{
+		font-size: 28px;
+		width: 350px;
+	}
+	.btn-plus,
+	.btn-plus-2,
+	.btn-plus-3,
+	.btn-plus-4,
+	.btn-plus-5{
+		font-size: 20px;
+		padding: 10px 12px;
+		left: 20rem;
+	}
+	li{
+		font-size: 22px;
+	}
+	li span{
+		font-size: 16px;
+	}
+	li span button{
+		width: 38px;
+		height: 38px;
+		margin-left: 24px;
+	}
+	.title-of-inner-html{
+		font-size: 28px;
+	}
+}
+@media screen and (max-width: 480px){
+	h1{
+		font-size: 30px;
+	}
+	.dark-light-mode{
+		right: 1rem;
+		top: 1.5rem;
+		width: 40px;
+		height: 20px;
+	}
+	.dark-light-mode .mode-btn{
+		width: 20px;
+		height: 20px;
+		margin-left: -7.5px;
+	}
+}
+@media screen and (max-width: 380px){
+	h1{
+		font-size: 27px;
+	}
+	h2{
+		font-size: 20px;
+		width: 290px;
+	}
+	h2 span{
+		display: none;
+	}
+	.btn-plus,
+	.btn-plus-2,
+	.btn-plus-3,
+	.btn-plus-4,
+	.btn-plus-5{
+		font-size: 18px;
+		padding: 8px 10px;
+		left: 16.8rem;
+		margin-top: -0.8px;
+	}
+	li{
+		font-size: 18px;
+	}
+	li span{
+		font-size: 15px;
+	}
+	li span button{
+		width: 34px;
+		height: 34px;
+		margin-left: 14px;
+		font-size: 18px;
+	}
+	.title-of-inner-html{
+		font-size: 24px;
+	}
+}
